@@ -1,0 +1,11 @@
+C:\JsonBridges\JsonBridges\bin\Release\JsonBridges.dll
+C:\JsonBridges\JsonBridges\bin\Release\JsonBridges.pdb
+C:\JsonBridges\JsonBridges\bin\Release\JsonMsgInspectors.dll
+C:\JsonBridges\JsonBridges\bin\Release\Newtonsoft.Json.dll
+C:\JsonBridges\JsonBridges\bin\Release\Microsoft.BizTalk.Services.dll
+C:\JsonBridges\JsonBridges\bin\Release\JsonMsgInspectors.pdb
+C:\JsonBridges\JsonBridges\bin\Release\Newtonsoft.Json.xml
+C:\JsonBridges\JsonBridges\bin\Release\Microsoft.BizTalk.Services.xml
+C:\JsonBridges\JsonBridges\obj\Release\JsonBridges.csprojResolveAssemblyReference.cache
+C:\JsonBridges\JsonBridges\obj\Release\JsonBridges.dll
+C:\JsonBridges\JsonBridges\obj\Release\JsonBridges.pdb

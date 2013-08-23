@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8570562E-F573-449B-AA4F-1BA340B8CA82}</ProjectGuid>
+    <ProjectTypeGuids>{1F7D1AC1-BF0E-4353-B6C4-10EB48C97527};{00FAA771-69CC-4AB9-A83D-50B49A68BA3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JsonBridges</RootNamespace>
+    <AssemblyName>JsonBridges</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\tutorials\Lessons\EAIEDITutorial\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BridgeConfiguration Include="JsonToXmlItinerary.bcs" />
+    <None Include="JsonToXmlItinerary.bcs.diagram">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </None>
+    <LookupProvider Include="LookupProviderConfigurations.xml" />
+    <AppConfig Include="XmlQueue.config">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </AppConfig>
+    <Bridge Include="AnyMessageType.BridgeConfig">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </Bridge>
+    <Bridge Include="XmlPassThroughBridge.BridgeConfig">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </Bridge>
+    <AppConfig Include="JsonQueue.config">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </AppConfig>
+    <Bridge Include="JsonOnlyBridge.BridgeConfig">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </Bridge>
+    <Bridge Include="XmlBridge.BridgeConfig">
+      <DependentUpon>JsonToXmlItinerary.bcs</DependentUpon>
+    </Bridge>
+    <XmlSchema Include="PO.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JsonMsgInspectors\JsonMsgInspectors.csproj">
+      <Project>{5ad34ede-7190-4711-a8a7-01b1eb8fde23}</Project>
+      <Name>JsonMsgInspectors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Windows Azure BizTalk Services SDK\Microsoft.ApplicationServer.Integration.MessageFlow.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildAction=".xsd:XmlSchema, .trfm:CompileTransform, .config:AppConfig, .BridgeConfig:Bridge, .bcs:BridgeConfiguration" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,7 @@
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\bin\Debug\Microsoft.BizTalk.Services.xml
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\bin\Debug\Microsoft.BizTalk.Services.dll
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\bin\Debug\Newtonsoft.Json.dll
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\bin\Debug\Newtonsoft.Json.xml
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Debug\JsonMsgInspectors.csprojResolveAssemblyReference.cache
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Debug\JsonMsgInspectors.dll
+C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Debug\JsonMsgInspectors.pdb

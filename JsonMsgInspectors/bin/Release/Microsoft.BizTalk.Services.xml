@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.BizTalk.Services</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.BizTalk.Services.IMessage">
+      <summary> Represents a Message </summary>
+    </member>
+    <member name="P:Microsoft.BizTalk.Services.IMessage.ContentType">
+      <summary> Gets or sets the Content-Type of the data </summary>
+    </member>
+    <member name="P:Microsoft.BizTalk.Services.IMessage.Data">
+      <summary> Gets or sets the Content </summary>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.IMessage.GetPromotedProperties">
+      <summary> Returns a collection of the promoted properties </summary>
+      <returns>the promoted properties</returns>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.IMessage.GetPromotedProperty(System.String)">
+      <summary> Gets the value of a promoted property </summary>
+      <returns>The value of the promoted property, or null if no promoted property exists with this name</returns>
+      <param name="propertyName">The name of the promoted property whose value needs to be returned</param>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.IMessage.Promote(System.String,System.Object)">
+      <summary> Promotes a property with a specified name and value </summary>
+      <param name="propertyName">The name of the promoted property.</param>
+      <param name="propertyValue">The value of the promoted property. A null value will remove the promoted property</param>
+    </member>
+    <member name="T:Microsoft.BizTalk.Services.IMessageInspector">
+      <summary> Represents a Message Inspector </summary>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.IMessageInspector.Execute(Microsoft.BizTalk.Services.IMessage,Microsoft.BizTalk.Services.IMessageInspectorContext)">
+      <summary> Processes the Message </summary>
+      <param name="message">the Message which needs to be processed by the Message Inspector</param>
+      <param name="context">the context associated with the current execution instance</param>
+    </member>
+    <member name="T:Microsoft.BizTalk.Services.IMessageInspectorContext">
+      <summary> Represents the Context associated with an execution of a Message Inspector </summary>
+    </member>
+    <member name="P:Microsoft.BizTalk.Services.IMessageInspectorContext.RequestId">
+      <summary> The unique identifier associated with the current executing instance </summary>
+    </member>
+    <member name="P:Microsoft.BizTalk.Services.IMessageInspectorContext.Tracer">
+      <summary> The ITracer instance which can be used for emitting traces </summary>
+    </member>
+    <member name="T:Microsoft.BizTalk.Services.ITracer">
+      <summary> Provides a mechanism to emit traces </summary>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.ITracer.TraceEvent(System.Diagnostics.TraceEventType,System.String,System.Object[])">
+      <summary> Writes a trace event </summary>
+      <param name="eventType">One of the enumeration values that specifies the event type of the trace data</param>
+      <param name="format">A composite format string that contains text intermixed with zero or more format items, which correspond to objects in the args array</param>
+      <param name="args">An object array containing zero or more objects to format</param>
+    </member>
+    <member name="T:Microsoft.BizTalk.Services.PipelinePropertyAttribute">
+      <summary> Represents a property which can be configured in a pipeline </summary>
+    </member>
+    <member name="M:Microsoft.BizTalk.Services.PipelinePropertyAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.BizTalk.Services.PipelinePropertyAttribute" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.BizTalk.Services.PipelinePropertyAttribute.Name">
+      <summary> Gets or sets the name of the Pipeline Property, as it appears in the configuration </summary>
+    </member>
+    <member name="T:Microsoft.BizTalk.Services.Pipeline.PipelineMessage"></member>
+    <member name="P:Microsoft.BizTalk.Services.Pipeline.PipelineMessage.ContentType"></member>
+    <member name="P:Microsoft.BizTalk.Services.Pipeline.PipelineMessage.Data"></member>
+    <member name="M:Microsoft.BizTalk.Services.Pipeline.PipelineMessage.GetPromotedProperties"></member>
+    <member name="M:Microsoft.BizTalk.Services.Pipeline.PipelineMessage.GetPromotedProperty(System.String)"></member>
+    <member name="M:Microsoft.BizTalk.Services.Pipeline.PipelineMessage.Promote(System.String,System.Object)"></member>
+  </members>
+</doc>

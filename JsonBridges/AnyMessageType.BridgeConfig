@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassThroughBridgeConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WindowsAzureServiceBus/Bridge">
+  <PassThroughBridge>
+    <EnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <Enrich>
+        <Properties>
+          <PropertyDefinition i:type="HttpHeaderPropertyDefinition">
+            <DataTypeString>string</DataTypeString>
+            <PropertyName>type</PropertyName>
+            <PropertyValueExpression i:nil="true" />
+            <HeaderName>Content-Type</HeaderName>
+          </PropertyDefinition>
+        </Properties>
+      </Enrich>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+    </EnrichStage>
+  </PassThroughBridge>
+</PassThroughBridgeConfiguration>

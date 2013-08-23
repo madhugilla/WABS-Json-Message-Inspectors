@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassThroughBridgeConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WindowsAzureServiceBus/Bridge">
+  <PassThroughBridge>
+    <EnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <Enrich>
+        <Properties />
+      </Enrich>
+      <OnEnterInspector>
+        <InspectorConfiguration>Prefix = ns0
+RootNode = Root
+Namespace = http://JsonBridges.PO</InspectorConfiguration>
+        <InspectorTypeName>JsonMsgInspectors.JsonToXmlConverter,JsonMsgInspectors, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b876af92046c8e51</InspectorTypeName>
+      </OnEnterInspector>
+      <OnExitInspector i:nil="true" />
+    </EnrichStage>
+  </PassThroughBridge>
+</PassThroughBridgeConfiguration>

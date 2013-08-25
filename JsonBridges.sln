@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonBridges", "JsonBridges\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonMsgInspectors", "JsonMsgInspectors\JsonMsgInspectors.csproj", "{5AD34EDE-7190-4711-A8A7-01B1EB8FDE23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonMsgInspectorsTests", "JsonMsgInspectorsTests\JsonMsgInspectorsTests.csproj", "{1C186825-3A28-4ECD-B50D-38C723087E14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5AD34EDE-7190-4711-A8A7-01B1EB8FDE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AD34EDE-7190-4711-A8A7-01B1EB8FDE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AD34EDE-7190-4711-A8A7-01B1EB8FDE23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C186825-3A28-4ECD-B50D-38C723087E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C186825-3A28-4ECD-B50D-38C723087E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C186825-3A28-4ECD-B50D-38C723087E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C186825-3A28-4ECD-B50D-38C723087E14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,10 +26,9 @@ namespace JsonMsgInspectors
 
         public Task Execute(IMessage message, IMessageInspectorContext context)
         {
-
             context.Tracer.TraceEvent(TraceEventType.Information,
                                       String.Format("JsonToXmlConverter - MessageType: {0}", message.ContentType));
-
+          
             return Task.Factory.StartNew(() =>
                 {
                     message.Data = GetXmlStream(message.Data, message.ContentType);
@@ -40,7 +39,7 @@ namespace JsonMsgInspectors
         }
 
 
-        public Stream GetXmlStream(Stream msgStream, ContentType contentType)
+        private Stream GetXmlStream(Stream msgStream, ContentType contentType)
         {
             Stream originalStream = msgStream;
             string json = null;
@@ -62,11 +61,11 @@ namespace JsonMsgInspectors
 
                 string jsonInnerXml = parser.FirstChild.InnerXml;
                 byte[] data = Convert.FromBase64String(jsonInnerXml);
-                json = ASCIIEncoding.ASCII.GetString(data);
+                json = Encoding.ASCII.GetString(data);
 
             }
 
-            /// http://www.modhul.com/2013/04/30/restfully-getting-json-formatted-data-with-biztalk-2013/
+            //// http://www.modhul.com/2013/04/30/restfully-getting-json-formatted-data-with-biztalk-2013/
              
             var xmlDoc = new XmlDocument();
             XmlNode jsonNode = JsonConvert.DeserializeXmlNode(json, "RootNode");

@@ -7,10 +7,12 @@ C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\bin\Release\Newtonsoft.Jso
 C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Release\JsonMsgInspectors.dll
 C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Release\JsonMsgInspectors.pdb
 C:\tutorials\Lessons\EAIEDITutorial\JsonMsgInspectors\obj\Release\JsonMsgInspectors.csprojResolveAssemblyReference.cache
-C:\JsonBridges\JsonMsgInspectors\bin\Release\JsonMsgInspectors.dll
-C:\JsonBridges\JsonMsgInspectors\bin\Release\JsonMsgInspectors.pdb
 C:\JsonBridges\JsonMsgInspectors\bin\Release\Microsoft.BizTalk.Services.dll
 C:\JsonBridges\JsonMsgInspectors\bin\Release\Newtonsoft.Json.dll
 C:\JsonBridges\JsonMsgInspectors\bin\Release\Microsoft.BizTalk.Services.xml
+C:\JsonBridges\JsonMsgInspectors\bin\Release\Newtonsoft.Json.xml
+C:\JsonBridges\JsonMsgInspectors\obj\Release\JsonMsgInspectors.csprojResolveAssemblyReference.cache
 C:\JsonBridges\JsonMsgInspectors\obj\Release\JsonMsgInspectors.dll
 C:\JsonBridges\JsonMsgInspectors\obj\Release\JsonMsgInspectors.pdb
+C:\JsonBridges\JsonMsgInspectors\bin\Release\JsonMsgInspectors.dll
+C:\JsonBridges\JsonMsgInspectors\bin\Release\JsonMsgInspectors.pdb

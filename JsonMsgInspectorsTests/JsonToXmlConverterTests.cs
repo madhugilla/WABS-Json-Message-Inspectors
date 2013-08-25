@@ -13,7 +13,7 @@ namespace JsonMsgInspectors.Test
     public class JsonToXmlConverterTests
     {
         [TestMethod]
-        public void ExecuteTest()
+        public void JsonToXmlExecuteTest()
         {
             var jsonToXmlConverter = new JsonToXmlConverter
                 {
@@ -46,7 +46,7 @@ namespace JsonMsgInspectors.Test
 
         private static Stream GetJsonStream()
         {
-            byte[] output = Encoding.ASCII.GetBytes("{'person': {'name': 'Demo1','url': 'appliedis.com'}}");
+            byte[] output = Encoding.ASCII.GetBytes("{'person': {'name': 'Demo1','url': 'somesite.com'}}");
             var memoryStream = new MemoryStream();
             memoryStream.Write(output, 0, output.Length);
             memoryStream.Position = 0;

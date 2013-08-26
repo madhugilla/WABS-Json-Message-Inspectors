@@ -59,7 +59,7 @@ namespace JsonMsgInspectors
                 var parser = new XmlDocument();
                 parser.Load(msgStream);
 
-                string jsonInnerXml = parser.FirstChild.InnerXml;
+                string jsonInnerXml = parser.FirstChild.Value;
                 byte[] data = Convert.FromBase64String(jsonInnerXml);
                 json = Encoding.ASCII.GetString(data);
 
